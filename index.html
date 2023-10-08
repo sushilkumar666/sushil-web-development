@@ -33,14 +33,17 @@
 <script>
     let item = document.getElementsByClassName('list-group-item');
     let allItem = document.getElementsByTagName('li');
+    let selectAll = document.querySelectorAll('li');
     console.log(allItem);
     let list5 = document.getElementsByClassName('list5');
     // this doesn't works
-    list5.innerText = "sushil sharma";
+    // list5.innerText = "sushil sharma";
 
      // this also doesn't works
-    allItem[5].innerText = "sushil sharma"
+    //  allItem[5].innerText = "sushil sharma"
+     var odd = document.querySelectorAll('.list-group-item:nth-child(odd)');
 
+    selectAll[1].style.color = 'green';
     
 
 
@@ -52,15 +55,14 @@
     itemLister.style.borderBottom = "2px solid black";
     
     // console.log(item);
-    var even = document.querySelectorAll('.list-group-item:nth-child(even)');
     // console.log(even);
     // var odd = document.querySelectorAll('#items:nth-Child(odd)');
     item[0].style.fontWeight = 'bold';
-    // item[1].style.color = 'green';
-    item[2].style.background = 'green';
-    for(let i = 0; i<item.length; i++){
-        item[i].style.color = 'maroon';
-        item[i].style.fontWeight = 'bold';
+    item[1].style.color = 'green';
+    // item[2].style.background = 'green';
+    for(let i = 0; i<odd.length; i++){
+        odd[i].style.background = 'green';
+         
     }
 </script>
 </body>
