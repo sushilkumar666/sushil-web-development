@@ -64,6 +64,86 @@
         odd[i].style.background = 'green';
          
     }
+
+     // Traversing the DOM 
+     let itemList = document.querySelector('#items');
+    
+    // parentNode 
+    console.log(itemList.parentNode);
+    itemList.parentNode.style.background = '#f4f4f4';
+    console.log(itemList.parentNode.parentNode.parentNode)
+
+    // parentElement
+    console.log(itemList.parentElement);
+    itemList.parentElement.style.background = '#f4f4f4';
+    console.log(itemList.parentElement.parentElement.parentElement);
+
+    // childNodes
+    console.log(itemList.childNodes);
+
+    console.log(itemList.children);
+    console.log(itemList.children[1]);
+    itemList.children[1].style.background = 'yellow';
+
+    // firstchild
+    console.log(itemList.firstChild);
+    //firstElementChild
+    console.log(itemList.firstElementChild);
+    itemList.firstElementChild.textContent = 'Hello';
+
+    // firstchild
+    console.log(itemList.lastChild);
+    //firstElementChild
+    console.log(itemList.lastElementChild);
+    itemList.lastElementChild.textContent = 'Hello4';
+
+    // nextsibling
+    console.log(itemList.nextSibling);
+    //nextElementSibling
+    console.log(itemList.nextElementSibling);
+
+    // previoussibling
+    console.log(itemList.previousSibling);
+    //previousElementsibling
+    console.log(itemList.previousElementSibling);
+    itemList.previousElementSibling.style.color = 'green'
+
+    // create a div 
+    var newdiv = document.createElement('div');
+    var newElem = document.createElement('div');
+    // addclass
+    newdiv.className = 'hello'
+
+    //addid
+    newdiv.id = 'hello1';
+
+    // add attribute
+    newdiv.setAttribute('title','Hello Div');
+
+    console.log(newdiv);
+
+    // create a textNode 
+    let newDivText = document.createTextNode('HEllo ');
+    newdiv.appendChild(newDivText);
+
+    var container = document.querySelector('header .container');
+    var h1 = document.querySelector('header h1');
+    container.insertBefore(newdiv, h1);
+    
+    newdiv.style.fontSize = '30px'
+
+    let newli = document.createElement('li');
+    let newText = document.createTextNode('HEllo')
+    newli.appendChild(newText);
+    newli.className = 'list-group-item'
+    console.log('sushil')
+    console.log(newli);
+    let items = document.getElementById('items');
+    let item1 = document.querySelector('.list-group-item');
+
+
+    items.insertBefore(newli, item1);
+
 </script>
 </body>
 </html>
